@@ -9,21 +9,26 @@ MEMORY {
 
 SECTIONS {
 
-    .text: {
+    .text : {
         *(.isr_vector)
         *(.text)
         *(.rodata)
+        _etext = .;
 
     } > FLASH
 
-    .data: {
+    .data : {
+        _sdata = .;
         *(.data)
+        _edata = .;
 
     }> SRAM AT> FLASH
 
-    .bss {
+    .bss : {
+        _sbss = .;
         *(.bss)
-    }
+        _ebss = .;
+    } > SRAM
 
 
 }
