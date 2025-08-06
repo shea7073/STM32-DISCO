@@ -15,3 +15,88 @@ main:
 
 
 .section .data
+
+
+.section .isr_vector, "a", %progbits
+.align 2
+
+.global __isr_vector
+.type __isr_vector, %object
+
+__isr_vector:
+    .word _estack               @ Initial stack pointer value (top of stack)
+    .word Reset_Handler         @ Reset handler
+    .word NMI_Handler           @ NMI
+    .word HardFault_Handler     @ HardFault
+    .word MemManage_Handler     @ MemManage
+    .word BusFault_Handler      @ BusFault
+    .word UsageFault_Handler    @ UsageFault
+    .word 0                     @ Reserved
+    .word 0                     @ Reserved
+    .word 0                     @ Reserved
+    .word 0                     @ Reserved
+    .word SVCall_Handler        @ SVCall
+    .word DebugMon_Handler      @ Debug Monitor
+    .word 0                     @ Reserved
+    .word PendSV_Handler        @ PendSV
+    .word SysTick_Handler       @ SysTick
+    @ Add peripheral IRQs here as needed
+    .word WWDG_Handler          @ Window Watchdog 
+    .word EXTI16_Handler        @ EXTI Line 16 interrupt / PVD through EXTI line detection interrupt
+    .word EXTI21_Handler        @ EXTI Line 21 interrupt / Tamper and TimeStamp interrupts through the EXTI line
+    .word EXTI22_Handler        @ EXTI Line 22 interrupt / RTC Wake-up interrupt through the EXTI line
+    .word FLASH_Handler         @ Flash global interrupt
+    .word RCC_Handler           @ RCC global interrupt
+    .word EXTI0_Handler         @ EXTI Line0 interrupt 
+    .word EXTI1_Handler         @ EXTI Line1 interrupt
+    .word EXTI2_Handler         @ EXTI Line2 interrupt
+    .word EXTI3_Handler         @ EXTI Line3 interrupt 
+    .word EXTI4_Handler         @ EXTI Line4 interrupt
+    .word DMA1_Stream0_Handler  @ DMA1 Stream0 global interrupt
+    .word DMA1_Stream1_Handler  @ DMA1 Stream1 global interrupt
+    .word DMA1_Stream2_Handler  @ DMA1 Stream2 global interrupt
+    .word DMA1_Stream3_Handler  @ DMA1 Stream3 global interrupt
+    .word DMA1_Stream4_Handler  @ DMA1 Stream4 global interrupt
+    .word DMA1_Stream5_Handler  @ DMA1 Stream5 global interrupt
+    .word DMA1_Stream6_Handler  @ DMA1 Stream6 global interrupt
+    .word ADC_Handler           @ ADC1 global interrupts
+    .word EXTI9_5_Handler       @ EXTI Line[9:5] interrupts
+    .word TIM1_BRK_TIM9_Handler @ TIM1 Break interrupt and TIM9 global interrupt
+    .word TIM1_UP_TIM10_Handler @ TIM1 Update interrupt and TIM10 global interrupt 
+    .word TIM1_TRG_COM_TIM11_Handler @ TIM1 Trigger and Commutation interrupts and TIM11 global interrupt
+    .word TIM1_CC_Handler       @ TIM1 Capture Compare interrupt 
+    .word TIM2_Handler          @ TIM2 global interrupt
+    .word TIM3_Handler          @ TIM3 global interrupt
+    .word TIM4_Handler          @ TIM4 global interrupt
+    .word I2C1_EV_Handler       @ I2C1 event interrupt
+    .word I2C1_ER_Handler       @ I2C1 error interrupt
+    .word I2C2_EV_Handler       @ I2C2 event interrupt
+    .word I2C2_ER_Handler       @ I2C2 error interrupt 
+    .word SPI1_Handler          @ SPI1 global interrupt
+    .word SPI2_Handler          @ SPI2 global interrupt
+    .word USART1_Handler        @ USART1 global interrupt
+    .word USART2_Handler        @ USART2 global interrupt
+    .word EXTI15_10_Handler     @ EXTI Line[15:10] interrupts
+    .word EXTI17_Handler        @ EXTI Line 17 interrupt / RTC Alarms (A and B) through EXTI line interrupt 
+    .word EXTI18_Handler        @ EXTI Line 18 interrupt / USB On-The-Go FS Wake-up through EXTI line interrupt
+    .word DMA1_Stream7_Handler  @ DMA1 Stream7 global interrupt
+    .word SDIO_Handler          @ SDIO global interrupt
+    .word TIM5_Handler          @ TIM5 global interrupt
+    .word SPI3_Handler          @ SPI3 global interrupt
+    .word DMA2_Stream0_Handler  @ DMA2 Stream0 global interrupt
+    .word DMA2_Stream1_Handler  @ DMA2 Stream1 global interrupt
+    .word DMA2_Stream2_Handler  @ DMA2 Stream2 global interrupt
+    .word DMA2_Stream3_Handler  @ DMA2 Stream3 global interrupt
+    .word DMA2_Stream4_Handler  @ DMA2 Stream4 global interrupt
+    .word OTG_FS_Handler        @ USB On The Go FS global interrupt 
+    .word DMA2_Stream5_Handler  @ DMA2 Stream5 global interrupt
+    .word DMA2_Stream6_Handler  @ DMA2 Stream6 global interrupt
+    .word DMA2_Stream7_Handler  @ DMA2 Stream7 global interrupt
+    .word USART6_Handler        @ USART6 global interrupt
+    .word I2C3_EV_Handler       @ I2C3 event interrupt
+    .word I2C3_ER_Handler       @ I2C3 error interrupt
+    .word FPU_Handler           @ FPU global interrupt 
+    .word SPI4_Handler          @ SPI 4 global interrupt
+    .word SPI5_Handler          @ SPI 5 global interrupt
+
+
