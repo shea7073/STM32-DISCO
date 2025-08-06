@@ -183,3 +183,123 @@ __isr_vector:
 .weak DMA1_Stream6_Handler
 .set  DMA1_Stream6_Handler, Default_Handler
 
+.weak ADC_Handler
+.set  ADC_Handler, Default_Handler
+
+.weak EXTI9_5_Handler
+.set  EXTI9_5_Handler, Default_Handler
+
+.weak TIM1_BRK_TIM9_Handler
+.set  TIM1_BRK_TIM9_Handler, Default_Handler
+
+.weak TIM1_UP_TIM10_Handler
+.set  TIM1_UP_TIM10_Handler, Default_Handler
+
+.weak TIM1_TRG_COM_TIM11_Handler
+.set  TIM1_TRG_COM_TIM11_Handler, Default_Handler
+
+.weak TIM1_CC_Handler
+.set  TIM1_CC_Handler, Default_Handler
+
+.weak TIM2_Handler
+.set  TIM2_Handler, Default_Handler
+
+.weak TIM3_Handler
+.set  TIM3_Handler, Default_Handler
+
+.weak TIM4_Handler
+.set  TIM4_Handler, Default_Handler
+
+.weak I2C1_EV_Handler
+.set  I2C1_EV_Handler, Default_Handler
+
+.weak I2C1_ER_Handler
+.set  I2C1_ER_Handler, Default_Handler
+
+.weak I2C2_EV_Handler
+.set  I2C2_EV_Handler, Default_Handler
+
+.weak I2C2_ER_Handler 
+.set  I2C2_ER_Handler, Default_Handler
+
+.weak SPI1_Handler 
+.set  SPI1_Handler, Default_Handler
+
+.weak SPI2_Handler 
+.set  SPI2_Handler, Default_Handler
+
+.weak USART1_Handler 
+.set  USART1_Handler, Default_Handler
+
+.weak USART2_Handler 
+.set  USART2_Handler, Default_Handler
+
+.weak EXTI15_10_Handler
+.set  EXTI15_10_Handler, Default_Handler
+
+.weak EXTI17_Handler
+.set  EXTI17_Handler, Default_Handler
+
+.weak EXTI18_Handler
+.set  EXTI18_Handler, Default_Handler
+
+.weak DMA1_Stream7_Handler
+.set  DMA1_Stream7_Handler, Default_Handler
+
+.weak SDIO_Handler
+.set  SDIO_Handler, Default_Handler
+
+.weak TIM5_Handler
+.set  TIM5_Handler, Default_Handler
+
+.weak SPI3_Handler 
+.set  SPI3_Handler, Default_Handler
+
+.weak DMA2_Stream0_Handler
+.set  DMA2_Stream0_Handler, Default_Handler
+
+.weak DMA2_Stream1_Handler
+.set  DMA2_Stream1_Handler, Default_Handler
+
+.weak DMA2_Stream2_Handler
+.set  DMA2_Stream2_Handler, Default_Handler
+
+.weak DMA2_Stream3_Handler
+.set  DMA2_Stream3_Handler, Default_Handler
+
+.weak DMA2_Stream4_Handler
+.set  DMA2_Stream4_Handler, Default_Handler
+
+.weak OTG_FS_Handler 
+.set  OTG_FS_Handler, Default_Handler
+
+.weak DMA2_Stream5_Handler
+.set  DMA2_Stream5_Handler, Default_Handler
+
+.weak DMA2_Stream6_Handler
+.set  DMA2_Stream6_Handler, Default_Handler
+
+.weak DMA2_Stream7_Handler
+.set  DMA2_Stream7_Handler, Default_Handler
+
+.weak USART6_Handler
+.set  USART6_Handler, Default_Handler
+
+.weak I2C3_EV_Handler  
+.set  I2C3_EV_Handler, Default_Handler
+
+.weak I2C3_ER_Handler   
+.set  I2C3_ER_Handler, Default_Handler
+
+.weak FPU_Handler  
+.set  FPU_Handler, Default_Handler
+
+.weak SPI4_Handler  
+.set  SPI4_Handler, Default_Handler
+
+.weak SPI5_Handler  
+.set  SPI5_Handler, Default_Handler
+
+
+
+

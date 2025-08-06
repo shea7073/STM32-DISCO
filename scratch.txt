@@ -1,0 +1,8 @@
+.data : AT(ADDR(.text) + SIZEOF(.text)) {
+        _sdata = .;            /* Start of .data in RAM */
+        *(.data*)              /* Actual initialized variables */
+        _edata = .;            /* End of .data in RAM */
+    } > SRAM
+
+
+    
