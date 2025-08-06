@@ -99,4 +99,87 @@ __isr_vector:
     .word SPI4_Handler          @ SPI 4 global interrupt
     .word SPI5_Handler          @ SPI 5 global interrupt
 
+.weak Reset_Handler
+.set  Reset_Handler, Default_Handler
+
+.weak NMI_Handler
+.set  NMI_Handler, Default_Handler
+
+.weak HardFault_Handler
+.set  HardFault_Handler, Default_Handler
+
+.weak MemManage_Handler
+.set  MemManage_Handler, Default_Handler
+
+.weak BusFault_Handler
+.set  BusFault_Handler, Default_Handler
+
+.weak UsageFault_Handler
+.set  UsageFault_Handler, Default_Handler
+
+.weak SVCall_Handler
+.set  SVCall_Handler, Default_Handler
+
+.weak DebugMon_Handler 
+.set  DebugMon_Handler, Default_Handler
+
+.weak PendSV_Handler
+.set  PendSV_Handler, Default_Handler
+
+.weak SysTick_Handler
+.set  SysTick_Handler, Default_Handler
+
+.weak WWDG_Handler
+.set  WWDG_Handler, Default_Handler
+
+.weak EXTI16_Handler
+.set  EXTI16_Handler, Default_Handler
+
+.weak EXTI21_Handler
+.set  EXTI21_Handler, Default_Handler
+
+.weak EXTI22_Handler
+.set  EXTI22_Handler, Default_Handler
+
+.weak FLASH_Handler
+.set  FLASH_Handler, Default_Handler
+
+.weak RCC_Handler
+.set  RCC_Handler, Default_Handler
+
+.weak EXTI0_Handler
+.set  EXTI0_Handler, Default_Handler
+
+.weak EXTI1_Handler
+.set  EXTI1_Handler, Default_Handler
+
+.weak EXTI2_Handler
+.set  EXTI2_Handler, Default_Handler
+
+.weak EXTI3_Handler
+.set  EXTI3_Handler, Default_Handler
+
+.weak EXTI4_Handler
+.set  EXTI4_Handler, Default_Handler
+
+.weak DMA1_Stream0_Handler
+.set  DMA1_Stream0_Handler, Default_Handler
+
+.weak DMA1_Stream1_Handler
+.set  DMA1_Stream1_Handler, Default_Handler
+
+.weak DMA1_Stream2_Handler
+.set  DMA1_Stream2_Handler, Default_Handler
+
+.weak DMA1_Stream3_Handler
+.set  DMA1_Stream3_Handler, Default_Handler
+
+.weak DMA1_Stream4_Handler
+.set  DMA1_Stream4_Handler, Default_Handler
+
+.weak DMA1_Stream5_Handler
+.set  DMA1_Stream5_Handler, Default_Handler
+
+.weak DMA1_Stream6_Handler
+.set  DMA1_Stream6_Handler, Default_Handler
 
