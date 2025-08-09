@@ -7,10 +7,13 @@ MEMORY {
 
 }
 
+_estack = ORIGIN(SRAM) + LENGTH(SRAM);
+
 SECTIONS {
 
     .text : {
         *(.isr_vector)
+        *(.text.*)
         *(.text)
         *(.rodata)
         _etext = .;
@@ -22,7 +25,7 @@ SECTIONS {
         *(.data)
         _edata = .;
 
-    }> SRAM AT> FLASH
+    } > SRAM AT > FLASH
 
     .bss : {
         _sbss = .;

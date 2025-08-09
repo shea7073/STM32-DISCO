@@ -1,21 +1,27 @@
     
-    .syntax unified          @ Use unified syntax (required for Thumb and ARM)
-    .cpu cortex-m4           @ Target CPU: Cortex-M4
-    .thumb                   @ Force assembler to use Thumb instructions
+.syntax unified          @ Use unified syntax (required for Thumb and ARM)
+.cpu cortex-m4           @ Target CPU: Cortex-M4
+.thumb                   @ Force assembler to use Thumb instructions
 
-    .section .text           @ Put code in the .text section
-    .global _start           @ Make _start visible to the linker
-    .type _start, %function  @ Mark _start as a function (optional but good style)
+@ subsection for reset handler within .text
+.section .text.Reset_Handler, "ax", %progbits
+.global Reset_Handler
+.type Reset_Handler, %function
+.extern main
+Reset_Handler:
+    bl main
+    b .
 
-_start:
-    bl main                  @ Branch with link to `main` function
-    b .                      @ Infinite loop to prevent falling off
-
-main:
+.section .text.Default_Handler, "ax", %progbits
+.global Default_Handler
+.type Default_Handler, %function
+Default_Handler:
+    b .
 
 
 .section .data
 
+    @ .data section code HERE
 
 .section .isr_vector, "a", %progbits
 .align 2
