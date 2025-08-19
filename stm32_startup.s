@@ -9,6 +9,8 @@
 .type Reset_Handler, %function
 .extern main
 Reset_Handler:
+
+    bl SystemInit
     bl main
     b .
 
